@@ -68,7 +68,7 @@ static NSString *const OCTRepositoryHTMLIssuesPath = @"issues";
 	}
 
 	dictionaryValue[@"repoDescription"] = externalRepresentation[@"description"] ?: NSNull.null;
-	dictionaryValue[@"private"] = externalRepresentation[@"private"] ?: @NO;
+	dictionaryValue[@"_private"] = externalRepresentation[@"private"] ?: @NO;
 	dictionaryValue[@"fork"] = externalRepresentation[@"fork"] ?: @NO;
 	dictionaryValue[@"datePushed"] = [self.datePushedJSONTransformer transformedValue:externalRepresentation[@"pushed_at"]] ?: NSNull.null;
 	dictionaryValue[@"HTTPSURL"] = [self.HTTPSURLJSONTransformer transformedValue:externalRepresentation[@"clone_url"]] ?: NSNull.null;
